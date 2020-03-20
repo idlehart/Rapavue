@@ -1,20 +1,18 @@
 <template>
   <section class="wrapper style1 align-center">
-    <!-- Gallery -->
-    <div class="gallery style2 medium lightbox onscroll-fade-in" id="eventGallery">
+    <div  class="gallery style2 medium lightbox onscroll-fade-in">
       <article v-for="event in events" :key="event.id">
-        {{event}}
-        <a href="images/gallery/fulls/01.jpg" class="image">
-          <img src="images/gallery/thumbs/01.jpg" alt />
+        <a class="image">
+          <img src="../assets/images/thumb01.jpg" alt />
         </a>
         <div class="caption">
-          <h3>Ipsum Dolor</h3>
-          <p>ASDASDASDASDASDASDASDASDASDASDASDASDASDASDASDASDASD</p>
-          <ul class="actions fixed">
+          <h3>{{event.where}}</h3>
+          <p>{{event.info}}</p>
+          <!-- <ul class="actions fixed">
             <li>
               <span class="button small">Details</span>
             </li>
-          </ul>
+          </ul> -->
         </div>
       </article>
     </div>
@@ -22,15 +20,15 @@
 </template>
 
 <script>
-import events from '../data/events.json';
+import events from "../data/events.json";
 export default {
-    data: () => {
-        return {
-            events,
-        }
-    },
+  data: () => {
+    return {
+      events
+    };
+  },
   name: "Gallery",
-  props: {},
+  props: {}
 };
 </script>
 

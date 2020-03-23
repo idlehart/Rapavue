@@ -6,9 +6,15 @@
     <Spotlight />
 
     <!-- Five -->
-    <Gallery />
-
-    <carousel />
+    <carousel :nav="false" :dots="false">
+        <div v-for="event in events" :key="event.id">
+            <img src="./assets/images/thumb01.jpg" />
+            <div class="centered-owl">
+                <h3>{{event.where}}</h3>
+                <p>{{event.info}}</p>
+            </div>
+        </div>
+    </carousel>
     <!-- Six -->
     <Partners />
 
@@ -55,19 +61,25 @@
 <script>
 import Banner from "./components/Banner";
 import Spotlight from "./components/Spotlight";
-import Gallery from "./components/Gallery";
+// import Gallery from "./components/Gallery";
 import Partners from "./components/Partners";
-import carousel from 'vue-owl-carousel2'
+import carousel from "vue-owl-carousel2";
+import events from "./data/events.json";
 
 export default {
   name: "App",
   components: {
     Spotlight,
     Banner,
-    Gallery,
+    // Gallery,
     Partners,
-    carousel,
-  }
+    carousel
+  },
+   data: () => {
+    return {
+      events
+    };
+  },
 };
 </script>
 
@@ -80,6 +92,13 @@ export default {
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+
+.centered-owl {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 html,
 body,

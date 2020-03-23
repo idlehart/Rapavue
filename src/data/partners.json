@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Partner1",
+        "thankyou": "Spotify HQ",
+        "image": "assets/logo.png"
+    },
+    {
+        "id": 2,
+        "name": "Partner2",
+        "thankyou": "Spotify HQ",
+        "image": "assets/logo.png"
+    },
+    {
+        "id": 3,
+        "name": "Partner3",
+        "thankyou": "Spotify HQ",
+        "image": "assets/logo.png"
+    }
+]

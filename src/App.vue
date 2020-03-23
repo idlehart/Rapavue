@@ -8,6 +8,7 @@
     <!-- Five -->
     <Gallery />
 
+    <carousel />
     <!-- Six -->
     <Partners />
 
@@ -56,6 +57,7 @@ import Banner from "./components/Banner";
 import Spotlight from "./components/Spotlight";
 import Gallery from "./components/Gallery";
 import Partners from "./components/Partners";
+import carousel from 'vue-owl-carousel2'
 
 export default {
   name: "App",
@@ -64,6 +66,7 @@ export default {
     Banner,
     Gallery,
     Partners,
+    carousel,
   }
 };
 </script>

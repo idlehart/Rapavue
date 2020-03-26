@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <!-- Banner -->
     <Banner />
     <!-- Two -->
@@ -82,13 +82,6 @@ export default {
 </script>
 
 <style>
-@import url("./assets/js/jquery.min.js");
-@import url("./assets/js/jquery.scrollex.min.js");
-@import url("./assets/js/jquery.scrolly.min.js");
-@import url("./assets/js/browser.min.js");
-@import url("./assets/js/breakpoints.min.js");
-@import url("./assets/js/util.js");
-@import url("./assets/js/main.js");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i");
 
 /*

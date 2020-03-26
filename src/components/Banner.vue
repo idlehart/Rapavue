@@ -3,15 +3,18 @@
     class="banner style1 orient-left content-align-left image-position-center fullscreen onload-image-fade-in onload-content-fade-right"
   >
     <div class="content">
-      <h1>Rapaway</h1>
+    <div class="imageFrame">
+      <img id="bannerimg" src="assets/rapawayBlack.png" alt="">
+    </div>
+      <!-- <h1>Rapaway</h1> -->
       <p class="major">Välkommen till Rapaway. Här sätter vi en välkommnande exempeltext.</p>
       <ul class="actions stacked">
         <li>
-          <a href="#first" class="button big wide smooth-scroll-middle">Get Started</a>
+          <a href="#first" class="button big wide smooth-scroll-middle">Berätta mer!</a>
         </li>
       </ul>
     </div>
-    <div class="image" id="flerp">
+    <div class="image">
       <img src="../assets/images/pic2.jpg" alt />
     </div>
   </section>
@@ -25,6 +28,41 @@ export default {
 </script>
 
 <style>
+.imageFrame {
+    display:inline-block;
+    vertical-align: middle;
+    width: 100%;
+    padding-bottom: 20px;
+}
+#bannerimg {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+}
+
+.banner.style1 {
+  -moz-align-items: -moz-stretch;
+  -webkit-align-items: -webkit-stretch;
+  -ms-align-items: -ms-stretch;
+  align-items: stretch;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-flex-direction: row;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -moz-justify-content: -moz-flex-end;
+  -webkit-justify-content: -webkit-flex-end;
+  -ms-justify-content: -ms-flex-end;
+  justify-content: flex-end;
+  position: relative;
+  text-align: center;
+  overflow-x: hidden;
+}
+
 .banner.onload-content-fade-up .content {
   -moz-transition: opacity 0.75s ease-in-out, -moz-transform 0.75s ease-in-out;
   -webkit-transition: opacity 0.75s ease-in-out,

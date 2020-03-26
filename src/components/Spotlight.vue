@@ -8,11 +8,11 @@
       <p>
         Här tänkte jag man kan placera lite mer text angående vad som händer på Rapaway.
       </p>
-      <ul class="actions stacked">
+      <!-- <ul class="actions stacked">
         <li>
           <a href="#" class="button">Learn More</a>
         </li>
-      </ul>
+      </ul> -->
     </div>
     <div class="image">
       <img src="../assets/images/pic1.jpg" alt />

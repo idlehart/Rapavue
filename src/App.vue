@@ -61,7 +61,6 @@
 <script>
 import Banner from "./components/Banner";
 import Spotlight from "./components/Spotlight";
-// import Gallery from "./components/Gallery";
 import Partners from "./components/Partners";
 import carousel from "vue-owl-carousel2";
 import events from "./data/events.json";
@@ -71,7 +70,6 @@ export default {
   components: {
     Spotlight,
     Banner,
-    // Gallery,
     Partners,
     carousel
   },
@@ -84,7 +82,13 @@ export default {
 </script>
 
 <style>
-@import url("./assets/css/fontawesome-all.min.css");
+@import url("./assets/js/jquery.min.js");
+@import url("./assets/js/jquery.scrollex.min.js");
+@import url("./assets/js/jquery.scrolly.min.js");
+@import url("./assets/js/browser.min.js");
+@import url("./assets/js/breakpoints.min.js");
+@import url("./assets/js/util.js");
+@import url("./assets/js/main.js");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i");
 
 /*
@@ -369,7 +373,7 @@ p {
 }
 
 p.major {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
 }
 
 h1,
@@ -484,7 +488,7 @@ hr.major {
 
 @media screen and (max-width: 736px) {
   p.major {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   h1 {
@@ -3224,28 +3228,6 @@ table.uniform tbody tr:nth-child(2n + 1) {
 /* Banner (transitions) */
 
 /* Banner (style1) */
-
-.banner.style1 {
-  -moz-align-items: -moz-stretch;
-  -webkit-align-items: -webkit-stretch;
-  -ms-align-items: -ms-stretch;
-  align-items: stretch;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  -moz-flex-direction: row;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -moz-justify-content: -moz-flex-end;
-  -webkit-justify-content: -webkit-flex-end;
-  -ms-justify-content: -ms-flex-end;
-  justify-content: flex-end;
-  position: relative;
-  text-align: left;
-  overflow-x: hidden;
-}
 
 .banner.style1 .content {
   padding: 7rem 7rem 5rem 7rem;

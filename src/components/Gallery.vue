@@ -3,7 +3,7 @@
     <div  class="gallery style2 medium lightbox onscroll-fade-in">
       <article v-for="event in events" :key="event.id">
         <a class="image">
-          <img src="../assets/images/thumb01.jpg" alt />
+          <img :src="event.image" alt />
         </a>
         <div class="caption">
           <h3>{{event.where}}</h3>

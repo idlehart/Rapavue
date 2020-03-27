@@ -8,7 +8,7 @@
     <!-- Five -->
     <carousel :nav="false" :dots="false">
         <div v-for="event in events" :key="event.id">
-            <img src="./assets/images/thumb01.jpg" />
+            <img :src="event.image" />
             <div class="centered-owl">
                 <h3>{{event.where}}</h3>
                 <p>{{event.info}}</p>
@@ -82,6 +82,7 @@ export default {
 </script>
 
 <style>
+@import url('./assets/css/fontawesome-all.min.css');
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i");
 
 /*
@@ -89,12 +90,16 @@ export default {
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-
+.centered-owl > h3 {
+    font-weight: 700;
+    color: whitesmoke;
+}
 .centered-owl {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: whitesmoke;
 }
 
 html,
@@ -4579,7 +4584,7 @@ body.is-preload .spotlight.onload-image-fade-in .image img {
   justify-content: flex-end;
   position: relative;
   overflow-x: hidden;
-  text-align: left;
+  text-align: center;
 }
 
 .spotlight.style1 .content {

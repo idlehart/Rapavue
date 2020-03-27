@@ -1,20 +1,14 @@
 [
     {
-        "id": 1,
-        "name": "Partner1",
-        "thankyou": "Spotify HQ",
-        "image": "/assets/logo.png"
-    },
-    {
         "id": 2,
-        "name": "Partner2",
-        "thankyou": "Spotify HQ",
-        "image": "/assets/logo.png"
+        "name": "Spotify",
+        "thankyou": "",
+        "image": "/assets/spotifyLogo.png"
     },
     {
         "id": 3,
-        "name": "Partner3",
-        "thankyou": "Spotify HQ",
-        "image": "/assets/logo.png"
+        "name": "Hedy Tech",
+        "thankyou": "",
+        "image": "/assets/hedyLogo.png"
     }
 ]

@@ -7,7 +7,7 @@
       </p>
       <div class="items style1 medium onscroll-fade-in">
         <section v-for="partner in partners" :key="partner.id">
-            <img :src="partner.image">
+            <img class="logoImage" :src="partner.image">
             <h3>{{partner.name}}</h3>
             <p>{{partner.thankyou}}</p>
         </section>
@@ -28,4 +28,8 @@ export default {
 </script>
 
 <style>
+.logoImage {
+    width: 65px;
+    height: 65px;
+}
 </style>

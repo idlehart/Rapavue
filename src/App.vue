@@ -6,7 +6,7 @@
     <Spotlight />
 
     <!-- Five -->
-    <carousel :nav="false" :dots="false">
+    <carousel :loop="true" :autoplay="true" :responsive="{0:{items:1,nav:false},600:{items:2,nav:false},1000:{items:3, nav:false}}" :dots="false">
         <div v-for="event in events" :key="event.id">
             <img :src="event.image" />
             <div class="centered-owl">
@@ -49,7 +49,7 @@
             </a>
           </li>
         </ul>
-        <p>
+        <p id="cred">
           &copy; Untitled. Design:
           <a href="https://html5up.net">HTML5 UP</a>.
         </p>
@@ -62,7 +62,7 @@
 import Banner from "./components/Banner";
 import Spotlight from "./components/Spotlight";
 import Partners from "./components/Partners";
-import carousel from "vue-owl-carousel2";
+import carousel from "vue-owl-carousel";
 import events from "./data/events.json";
 
 export default {
@@ -90,6 +90,9 @@ export default {
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+#cred {
+    visibility: hidden;
+}
 .centered-owl > h3 {
     font-weight: 700;
     color: whitesmoke;

@@ -6,8 +6,8 @@
     <Spotlight />
 
     <!-- Five -->
-    <carousel :loop="true" :autoplay="true" :responsive="{0:{items:1,nav:false},600:{items:2,nav:false},1000:{items:3, nav:false}}" :dots="false">
-        <div v-for="event in events" :key="event.id">
+    <carousel v-if="loaded" :loop="true" :autoplay="true" :responsive="{0:{items:1,nav:false},600:{items:2,nav:false},1000:{items:3, nav:false}}" :dots="false">
+        <div v-for="event in loadedEvents" :key="event.id">
             <img :src="event.image" />
             <div class="centered-owl">
                 <h3>{{event.where}}</h3>
@@ -63,7 +63,6 @@ import Banner from "./components/Banner";
 import Spotlight from "./components/Spotlight";
 import Partners from "./components/Partners";
 import carousel from "vue-owl-carousel";
-import events from "/assets/data/events.json";
 
 export default {
   name: "App",
@@ -75,9 +74,30 @@ export default {
   },
    data: () => {
     return {
-      events
+      events: null,
+      loaded: false
     };
   },
+  created () {
+    this.fetchEvents()
+  },
+  computed: {
+    loadedEvents() {
+      console.log('loadedEvents', this.events)
+      return this.events
+    }
+  },
+  methods: {
+    fetchEvents() {
+      fetch( 'assets/data/events.json' )
+        .then( resp => resp.json() )
+        .then ( json => {
+          console.log('json parsed', json)
+          this.events = json
+          this.loaded = true
+        })
+    },
+  }
 };
 </script>
 

@@ -2,12 +2,12 @@
   <section
     class="banner style1 orient-left content-align-left image-position-center fullscreen onload-image-fade-in onload-content-fade-right"
   >
-    <div class="content">
-    <div class="imageFrame">
-      <img id="bannerimg" src="assets/rapawayBlack.png" alt="">
-    </div>
+    <div class="content" v-bind="data">
+        <div class="imageFrame">
+        <img id="bannerimg" src="assets/rapawayBlack.png" alt="">
+        </div >
       <!-- <h1>Rapaway</h1> -->
-      <p class="major">Välkommen till Rapaway. Här sätter vi en välkommnande exempeltext.</p>
+      <p class="major">{{data.text}}</p>
       <ul class="actions stacked">
         <li>
           <a href="#first" class="button big wide smooth-scroll-middle">Berätta mer!</a>
@@ -21,9 +21,16 @@
 </template>
 
 <script>
+import bannerData from '../../public/assets/data/banner.json';
+
 export default {
   name: "Banner",
-  props: {}
+  props: {},
+  data() {
+      return {
+          data: bannerData
+      };
+  },
 };
 </script>
 

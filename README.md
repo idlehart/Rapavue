@@ -1,5 +1,21 @@
 # app
 
+## With Docker
+### Build image
+```
+run docker-compose build
+``` 
+
+### Development environment
+```
+run docker-compose up devel
+``` 
+
+### Build & Export files
+```
+run docker-compose up export
+``` 
+
 ## Project setup
 ```
 yarn install

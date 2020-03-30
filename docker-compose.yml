@@ -1,7 +1,7 @@
 # for local development
 version: '3.7'
 services:
-  frontend:
+  devel:
     build:
       context: .
       target: 'develop-stage'
@@ -10,3 +10,12 @@ services:
     volumes:
     - './src:/app/src'
     command: /bin/sh -c "yarn serve"
+  
+  export:
+    build:
+      context: .
+      target: 'develop-stage'
+    volumes:
+    - './dist:/app/export'
+    - './src:/app/src'
+    command: /bin/sh -c "yarn build && cp -R ./dist/* ./export/"

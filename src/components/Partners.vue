@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import partners from '../data/partners.json';
+import partners from 'public/assets/data/partners.json';
 export default {
   name: "Partners",
   props: {},

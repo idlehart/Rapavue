@@ -20,7 +20,6 @@
 </template>
 
 <script>
-import events from "../data/events.json";
 export default {
   data: () => {
     return {

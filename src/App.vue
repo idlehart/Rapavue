@@ -63,7 +63,7 @@ import Banner from "./components/Banner";
 import Spotlight from "./components/Spotlight";
 import Partners from "./components/Partners";
 import carousel from "vue-owl-carousel";
-import events from "/assets/data/events.json";
+import events from "../public/assets/data/events.json";
 
 export default {
   name: "App",

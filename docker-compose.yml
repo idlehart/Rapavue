@@ -19,3 +19,10 @@ services:
     - './dist:/app/export'
     - './src:/app/src'
     command: /bin/sh -c "yarn build && cp -R ./dist/* ./export/"
+
+  prod:
+    build:
+      context: .
+      target: 'production-stage'
+    ports:
+    - '80:80'

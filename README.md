@@ -10,11 +10,18 @@ run docker-compose build
 ```
 run docker-compose up devel
 ``` 
+then open the browser <a target="_blank" href="http://localhost:8080">
 
 ### Build & Export files
 ```
 run docker-compose up export
 ``` 
+
+### Build and test production
+```
+run docker-compose up prod
+``` 
+then open the browser <a target="_blank" href="http://localhost">
 
 ## Project setup
 ```

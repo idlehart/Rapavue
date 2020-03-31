@@ -24,7 +24,33 @@
 <script>
 export default {
   name: "Spotlight",
-  props: {}
+  props: {},
+  data: () => {
+    return {
+      spotlightData: null,
+      loaded: false
+    };
+  },
+  created () {
+    this.fetchSpotlightData()
+  },
+  computed: {
+    loadedEvents() {
+      console.log('loadedSpotlightData', this.spotlightData)
+      return this.spotlightData
+    }
+  },
+  methods: {
+    fetchSpotlightData() {
+      fetch( 'assets/data/spotlight.json', { cache: 'no-cache' } )
+        .then( resp => resp.json() )
+        .then ( json => {
+          console.log('json parsed', json)
+          this.spotlightData = json
+          this.loaded = true
+        })
+    },
+  }
 };
 </script>
 

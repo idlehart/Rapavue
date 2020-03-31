@@ -2,12 +2,12 @@
   <section
     class="banner style1 orient-left content-align-left image-position-center fullscreen onload-image-fade-in onload-content-fade-right"
   >
-    <div class="content" v-bind="data">
+    <div class="content">
         <div class="imageFrame">
         <img id="bannerimg" src="assets/rapawayBlack.png" alt="">
         </div >
       <!-- <h1>Rapaway</h1> -->
-      <p class="major">{{data.text}}</p>
+      <p class="major" v-if="bannerData">{{bannerData.text}}</p>
       <ul class="actions stacked">
         <li>
           <a href="#first" class="button big wide smooth-scroll-middle">Berätta mer!</a>
@@ -21,16 +21,36 @@
 </template>
 
 <script>
-import bannerData from '../../public/assets/data/banner.json';
 
 export default {
   name: "Banner",
   props: {},
-  data() {
-      return {
-          data: bannerData
-      };
+  data: () => {
+    return {
+      bannerData: null,
+      loaded: false
+    };
   },
+  created () {
+    this.fetchBannerData()
+  },
+  computed: {
+    loadedEvents() {
+      console.log('loadedBannerData', this.bannerData)
+      return this.bannerData
+    }
+  },
+  methods: {
+    fetchBannerData() {
+      fetch('assets/data/banner.json', { cache: 'no-cache'})
+        .then( resp => resp.json() )
+        .then ( json => {
+          console.log('json parsed', json)
+          this.bannerData = json
+          this.loaded = true
+        })
+    },
+  }
 };
 </script>
 

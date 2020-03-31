@@ -118,6 +118,7 @@ export default {
     color: whitesmoke;
 }
 .centered-owl {
+  text-shadow: 1px 1px black; 
   position: absolute;
   top: 50%;
   left: 50%;

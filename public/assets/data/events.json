@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Stockholm",
-        "where": "Spotify HQQQQQQ",
+        "where": "Spotify HQ",
         "when": "May 2020",
         "info": "Kort sträng med info om eventet",
         "image": "/assets/pictures/event1.jpg"
@@ -10,7 +10,7 @@
     {
         "id": 2,
         "name": "Malmö",
-        "where": "Spotify HQasdasd",
+        "where": "Spotify HQ",
         "when": "May 2020",
         "info": "Kort sträng med info om eventet",
         "image": "/assets/pictures/event2.jpg"
@@ -18,7 +18,7 @@
     {
         "id": 3,
         "name": "Stockholm",
-        "where": "Spotify HQhfjf",
+        "where": "Spotify HQ",
         "when": "May 2020",
         "info": "Kort sträng med info om eventet",
         "image": "/assets/pictures/event3.jpg"

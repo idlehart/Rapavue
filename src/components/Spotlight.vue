@@ -3,10 +3,10 @@
     class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
     id="first"
   >
-    <div class="content">
-      <h2>Mer djupgående information här!</h2>
+    <div class="content" v-if="loaded">
+      <h2>{{spotlightData.titleText}}</h2>
       <p>
-        Här tänkte jag man kan placera lite mer text angående vad som händer på Rapaway.
+        {{spotlightData.text}}
       </p>
       <!-- <ul class="actions stacked">
         <li>
@@ -42,7 +42,7 @@ export default {
   },
   methods: {
     fetchSpotlightData() {
-      fetch( 'assets/data/spotlight.json', { cache: 'no-cache' } )
+      fetch( 'assets/data/spotlight.json', { cache: 'reload' } )
         .then( resp => resp.json() )
         .then ( json => {
           console.log('json parsed', json)

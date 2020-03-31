@@ -89,7 +89,7 @@ export default {
   },
   methods: {
     fetchEvents() {
-      fetch( 'assets/data/events.json', { cache: 'no-cache' } )
+      fetch( 'assets/data/events.json', { cache: 'reload' } )
         .then( resp => resp.json() )
         .then ( json => {
           console.log('json parsed', json)

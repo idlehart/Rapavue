@@ -7,7 +7,7 @@
         <img id="bannerimg" src="assets/rapawayBlack.png" alt="">
         </div >
       <!-- <h1>Rapaway</h1> -->
-      <p class="major" v-if="bannerData">{{bannerData.text}}</p>
+      <p class="major" v-if="loaded">{{bannerData.text}}</p>
       <ul class="actions stacked">
         <li>
           <a href="#first" class="button big wide smooth-scroll-middle">Berätta mer!</a>
@@ -42,7 +42,7 @@ export default {
   },
   methods: {
     fetchBannerData() {
-      fetch('assets/data/banner.json', { cache: 'no-cache'})
+      fetch('assets/data/banner.json', { cache: 'reload'})
         .then( resp => resp.json() )
         .then ( json => {
           console.log('json parsed', json)
